@@ -14,7 +14,8 @@
     },
 
     "devDependencies": {
-        "jasmine-node": "1.x.x"
+        "cucumber": "0.2.x",
+        "expect.js": "0.1.2"
     },
 
     "license": "MIT"
