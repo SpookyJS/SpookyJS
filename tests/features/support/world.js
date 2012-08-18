@@ -11,11 +11,16 @@ var World = function World(callback) {
 
     this.errors = [];
     if (!casper) {
-        casper = Spooky.listen({
-            port: 8081,
-            script: 'lib/bootstrap.js',
-            spooky_lib: './node_modules'
-        }, onReady);
+        try {
+            casper = Spooky.listen({
+                port: 8081,
+                script: 'lib/bootstrap.js',
+                spooky_lib: './node_modules',
+            }, onReady);
+        } catch (e) {
+            console.dir(e)
+            console.trace('Spooky.listen failed');
+        }
 
         //casper.debug = true;
 
