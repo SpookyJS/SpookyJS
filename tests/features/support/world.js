@@ -67,8 +67,9 @@ var World = function World(callback) {
         }
         world.spooky = spooky = Spooky.create({
             port: 8081,
-            onError: function (e) {
-                console.log('Doh!', e);
+            casper: !casper.debug ? {} : {
+                verbose: true,
+                logLevel: 'debug'
             }
         }, onCreated);
     }
