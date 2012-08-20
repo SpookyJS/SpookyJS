@@ -14,8 +14,10 @@
     },
 
     "devDependencies": {
-        "cucumber": "0.2.x",
-        "expect.js": "0.1.2"
+        "mocha": "1.3.x",
+        "expect.js": "0.1.x",
+        "http-server": "0.5.x",
+        "cucumber": "0.2.x"
     },
 
     "license": "MIT"
