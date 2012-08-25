@@ -11,10 +11,11 @@ test:
 	@$(NODE_MODULES)/.bin/http-server -s -p $(TEST_PORT) & echo "$$!" > $(PID_FILE)
 	@cd $(PWD)
 	@$(NODE_MODULES)/.bin/mocha tests/test --recursive \
-		--globals define \
-		--timeout $(TEST_TIMEOUT) --slow $(TEST_SLOW) \
-		-R $(TEST_REPORTER)
-	@kill -9 `cat $(PID_FILE)`
-	@rm $(PID_FILE)
+			--globals define \
+			--timeout $(TEST_TIMEOUT) --slow $(TEST_SLOW) \
+			-R $(TEST_REPORTER) ; \
+		STATUS=$$? ; \
+		kill -9 `cat $(PID_FILE)` ; rm $(PID_FILE) ; \
+		exit $$STATUS
 
 .PHONY: test
