@@ -65,7 +65,7 @@ function setup (context, done) {
 
         context.spooky = Spooky.create({
             port: 8081,
-            casper: !context.casper.debug ? {} : {
+            casper: {
                 verbose: true,
                 logLevel: 'debug'
             }
@@ -92,6 +92,8 @@ function setup (context, done) {
     }
 }
 
+module.exports.FIXTURE_URL = 'http://localhost:8080';
+
 module.exports.before = function (context) {
     context.config = _.defaults(context.config || {}, {
         port: 8081,
@@ -107,7 +109,8 @@ module.exports.before = function (context) {
 
 module.exports.after = function (context) {
     return function (done) {
-        util.inspect(context.config);
+        context.spooky.removeAllListeners();
+        context.casper.removeAllListeners();
         Spooky.unlisten(context.config.port);
         done();
     };
