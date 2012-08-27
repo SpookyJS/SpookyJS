@@ -40,7 +40,11 @@ The following parameters are supported (defaults are in parentheses):
 * `TEST_SLOW` threshold in ms to say a test is slow (2000)
 * `TEST_ARGS` Additional [arguments](http://visionmedia.github.com/mocha/#usage) to pass through to Mocha
 
-## Attribution
+## License
+
+SpookyJS is made available under the [MIT License](http://opensource.org/licenses/mit-license.php).
+
+## Acknowledgements and Attribution
 
 The image `tests/fixtures/fail-road.jpeg` is the work [Fail
 Road](http://www.flickr.com/photos/fireflythegreat/2845637227/) and is
