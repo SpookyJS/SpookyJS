@@ -15,7 +15,7 @@ test:
 	@$(NODE_MODULES)/.bin/mocha tests/test --recursive \
 			--globals define \
 			--timeout $(TEST_TIMEOUT) --slow $(TEST_SLOW) \
-			-R $(TEST_REPORTER) ; \
+			-R $(TEST_REPORTER) $(TEST_ARGS) ; \
 		STATUS=$$? ; \
 		kill -9 `cat $(PID_FILE)` ; rm $(PID_FILE) ; \
 		exit $$STATUS
