@@ -18,6 +18,39 @@ $ npm install spooky
 
 ## Usage
 
+``` javascript
+var Spooky = require('spooky');
+
+var spooky = new Spooky(null, function (err, error, response) {
+        var e;
+        if (err || error) {
+            e = new Error('Failed to initialize SpookyJS');
+            e.details = err || error;
+            throw e;
+        }
+
+        spooky.on('error', function (e) {
+            console.error(e);
+        });
+
+        spooky.on('console', function (line) {
+            console.log(line);
+        });
+
+        spooky.start();
+        spooky.then(function () {
+            this.echo('Hello, SpookyJS');
+        });
+        spooky.run();
+    });
+```
+
+A minimal example can be found in `examples`.
+
+``` shell
+$ node examples/hello.js
+```
+
 See `tests/util/hooks.js` for an example of how to use SpookyJS with [Mocha](http://visionmedia.github.com/mocha). 
 
 See `tests/features/` for an example using SpookyJS with Cucumber.js.
