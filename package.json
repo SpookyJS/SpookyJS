@@ -1,6 +1,6 @@
 {
     "name": "spooky",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": "Lon Ingram <lon@waterfallmobile.com>",
     "description": "Drive CasperJS from Node.js",
 
@@ -16,8 +16,7 @@
     "devDependencies": {
         "mocha": "1.3.x",
         "expect.js": "0.1.x",
-        "http-server": "0.5.x",
-        "cucumber": "0.2.x"
+        "http-server": "0.5.x"
     },
 
     "license": "MIT"
