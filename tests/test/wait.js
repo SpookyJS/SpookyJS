@@ -39,13 +39,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'pass' || line === 'fail') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         expect(line).to.be('pass');
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -62,12 +62,12 @@ describe("Spooky provides Casper's wait* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'done') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -85,12 +85,12 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'done') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -154,13 +154,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'pass' || line === 'fail') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         expect(line).to.be('pass');
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -180,13 +180,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -202,12 +202,12 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'done') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -228,13 +228,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -290,13 +290,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'pass' || line === 'fail') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         expect(line).to.be('pass');
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -314,13 +314,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -334,12 +334,12 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'done') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -358,13 +358,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -421,13 +421,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'pass' || line === 'fail') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         expect(line).to.be('pass');
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -445,13 +445,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -465,12 +465,12 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'done') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -489,13 +489,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -552,13 +552,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'pass' || line === 'fail') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         expect(line).to.be('pass');
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -581,13 +581,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -601,12 +601,12 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'done') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -625,13 +625,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -688,13 +688,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'pass' || line === 'fail') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         expect(line).to.be('pass');
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -712,13 +712,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -736,12 +736,12 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'done') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -764,13 +764,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -826,13 +826,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'pass' || line === 'fail') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         expect(line).to.be('pass');
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -854,13 +854,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -874,12 +874,12 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'done') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -898,13 +898,13 @@ describe("Spooky provides Casper's wait* functions", function () {
 
             function onConsole(line) {
                 if (line === 'pass' || line === 'fail') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     expect(line).to.be('pass');
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });

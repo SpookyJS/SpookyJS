@@ -36,14 +36,14 @@ describe("Spooky provides Casper's then* functions", function () {
             function onConsole(line) {
                 if (line === 'Second') {
                     expect(out).to.contain('First');
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
 
                 out.push(line);
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -61,14 +61,14 @@ describe("Spooky provides Casper's then* functions", function () {
 
             function onConsole(line) {
                 if (line === 'bar') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
 
                 out.push(line);
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -103,13 +103,13 @@ describe("Spooky provides Casper's then* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'pass' || line === 'fail') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         expect(line).to.be('pass');
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -134,12 +134,12 @@ describe("Spooky provides Casper's then* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'done') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -164,12 +164,12 @@ describe("Spooky provides Casper's then* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'done') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -206,13 +206,13 @@ describe("Spooky provides Casper's then* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'pass' || line === 'fail') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         expect(line).to.be('pass');
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });
@@ -238,12 +238,12 @@ describe("Spooky provides Casper's then* functions", function () {
 
                 function onConsole(line) {
                     if (line === 'done') {
-                        context.casper.removeListener('console', onConsole);
+                        context.spooky.removeListener('console', onConsole);
                         done();
                         return;
                     }
                 }
-                context.casper.on('console', onConsole);
+                context.spooky.on('console', onConsole);
 
                 context.spooky.run();
             });

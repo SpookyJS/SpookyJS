@@ -22,12 +22,12 @@ describe("Spooky provides Casper's navigation functions", function () {
 
             function onConsole(line) {
                 if (line === FIXTURE_URL + '/1.html') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -50,12 +50,12 @@ describe("Spooky provides Casper's navigation functions", function () {
 
             function onConsole(line) {
                 if (line === FIXTURE_URL + '/2.html') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
@@ -73,12 +73,12 @@ describe("Spooky provides Casper's navigation functions", function () {
 
             function onConsole(line) {
                 if (line === FIXTURE_URL + '/1.html') {
-                    context.casper.removeListener('console', onConsole);
+                    context.spooky.removeListener('console', onConsole);
                     done();
                     return;
                 }
             }
-            context.casper.on('console', onConsole);
+            context.spooky.on('console', onConsole);
 
             context.spooky.run();
         });
