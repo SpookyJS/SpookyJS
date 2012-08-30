@@ -95,6 +95,7 @@ The following make parameters are supported (defaults are in parentheses):
 * `TEST_TIMEOUT` threshold in ms to timeout a test (4000)
 * `TEST_SLOW` threshold in ms to say a test is slow (2000)
 * `TEST_ARGS` Additional [arguments](http://visionmedia.github.com/mocha/#usage) to pass through to Mocha
+* `TEST_DEBUG` Print debug logging to the console (false)
 
 ## License
 
