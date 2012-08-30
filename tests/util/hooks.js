@@ -12,7 +12,7 @@ function setup (context, done) {
         console.trace('Spooky.listen failed');
     }
 
-    //spooky.debug = true;
+    spooky.debug = !!process.env.TEST_DEBUG;
 
     // track errors
     spooky.errors = [];
