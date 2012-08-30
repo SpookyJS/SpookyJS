@@ -3,4 +3,9 @@ module.exports = function () {
         this.spooky.start();
         callback();
     });
+
+    this.After(function (callback) {
+        this.spooky.destroy();
+        callback();
+    });
 };

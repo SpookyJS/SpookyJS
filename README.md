@@ -62,15 +62,21 @@ var spooky = new Spooky({
     });
 ```
 
-A minimal example can be found in `examples`.
+A minimal example can be found in the repo under `examples`. Run it like this:
 
 ``` shell
 $ node examples/hello.js
 ```
 
-See `tests/util/hooks.js` for an example of how to use SpookyJS with [Mocha](http://visionmedia.github.com/mocha). 
+A small example [Cucumber.js](https://github.com/cucumber/cucumber-js/) test suite can be found in the repo under `examples/cucumber`. To run the suite:
 
-See `tests/features/` for an example using SpookyJS with Cucumber.js.
+``` shell
+$ make cucumber.js
+```
+
+You may change the port that the fixture server runs on by setting the `TEST_PORT` make parameter.
+
+See the tests for an example of how to use SpookyJS with [Mocha](http://visionmedia.github.com/mocha). 
 
 ## Development
 
@@ -82,7 +88,7 @@ SpookyJS includes a suite of unit tests, driven by [Mocha](http://visionmedia.gi
 $ make test
 ```
 
-The following parameters are supported (defaults are in parentheses):
+The following make parameters are supported (defaults are in parentheses):
 
 * `TEST_REPORTER` the [Mocha reporter](http://visionmedia.github.com/mocha/#reporters) to use (dot)
 * `TEST_PORT` the port to run the fixture web server on (8080)
