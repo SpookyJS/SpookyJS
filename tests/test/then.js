@@ -12,7 +12,7 @@ describe("Spooky provides Casper's then* functions", function () {
         it('throws if passed something that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -78,7 +78,7 @@ describe("Spooky provides Casper's then* functions", function () {
         it('throws if passed something that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -179,7 +179,7 @@ describe("Spooky provides Casper's then* functions", function () {
         it('throws if passed something that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });

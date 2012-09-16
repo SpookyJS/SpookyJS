@@ -12,7 +12,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed something that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -100,7 +100,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a test that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -111,7 +111,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a next step that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -123,7 +123,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a timeout callback that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -244,7 +244,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a next step that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -256,7 +256,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a timeout callback that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -374,7 +374,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a next step that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -386,7 +386,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a timeout callback that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -505,7 +505,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a next step that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -517,7 +517,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a timeout callback that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -641,7 +641,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a next step that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -653,7 +653,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a timeout callback that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -780,7 +780,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a next step that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
@@ -792,7 +792,7 @@ describe("Spooky provides Casper's wait* functions", function () {
         it('throws if passed a timeout callback that is not a function',
             function (done) {
                 context.spooky.once('error', function (e) {
-                    expect(e.data.toLowerCase()).to.
+                    expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
                     done();
                 });
