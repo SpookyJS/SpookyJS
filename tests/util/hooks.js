@@ -8,7 +8,8 @@ function setup (context, done) {
     try {
         spooky = context.spooky = new Spooky(context.config, onCreated);
     } catch (e) {
-        console.dir(e)
+        console.log(util.inspect(e, false, 3));
+        console.log(e.stack);
         console.trace('Spooky.listen failed');
     }
 
@@ -54,10 +55,9 @@ function setup (context, done) {
         }
     });
 
-    function onCreated(err, error, response) {
-        if (err) {
-            throw err;
-        } else if (error) {
+    function onCreated(error, response) {
+        if (error) {
+            console.trace(error);
             console.dir(error);
             throw new Error('Failed to initialize context.spooky: ' +
                 error.code + ' - '  + error.message);
@@ -75,6 +75,7 @@ module.exports.before = function (context) {
             port: 8081,
             script: 'lib/bootstrap.js',
             spooky_lib: './node_modules',
+            transport: process.env.TEST_TRANSPORT || 'http'
         },
         casper: {
             verbose: true,
