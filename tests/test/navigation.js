@@ -6,7 +6,7 @@ describe("Spooky provides Casper's navigation functions", function () {
     var hooks = require('../util/hooks');
     var FIXTURE_URL = hooks.FIXTURE_URL;
 
-    before(hooks.before(context));
+    beforeEach(hooks.before(context));
 
     describe('spooky.back', function () {
         it("moves back a step in the browser's history", function (done) {
@@ -86,6 +86,6 @@ describe("Spooky provides Casper's navigation functions", function () {
         // TODO: figure out how to test settings object
     });
 
-    after(hooks.after(context));
+    afterEach(hooks.after(context));
 });
 
