@@ -2,7 +2,6 @@ var Spooky = require('../lib/spooky');
 
 var spooky = new Spooky({
         child: {
-            port: 8081,
             script: './lib/bootstrap.js',
             spooky_lib: './node_modules'
         },
@@ -10,10 +9,10 @@ var spooky = new Spooky({
             logLevel: 'debug',
             verbose: true
         }
-    }, function (err, error) {
-        if (err || error) {
+    }, function (err) {
+        if (err) {
             e = new Error('Failed to initialize SpookyJS');
-            e.details = err || error;
+            e.details = err;
             throw e;
         }
 

@@ -19,18 +19,21 @@ $ npm install spooky
 ## Usage
 
 ``` javascript
-var Spooky = require('spooky');
+var Spooky = require('../lib/spooky');
 
 var spooky = new Spooky({
+        child: {
+            script: './lib/bootstrap.js',
+            spooky_lib: './node_modules'
+        },
         casper: {
             logLevel: 'debug',
             verbose: true
         }
-    }, function (err, error, response) {
-        var e;
-        if (err || error) {
+    }, function (err) {
+        if (err) {
             e = new Error('Failed to initialize SpookyJS');
-            e.details = err || error;
+            e.details = err;
             throw e;
         }
 
@@ -96,6 +99,7 @@ The following make parameters are supported (defaults are in parentheses):
 * `TEST_SLOW` threshold in ms to say a test is slow (2000)
 * `TEST_ARGS` Additional [arguments](http://visionmedia.github.com/mocha/#usage) to pass through to Mocha
 * `TEST_DEBUG` Print debug logging to the console (false)
+* `TEST_TRANSPORT` the Spooky transport to use when running the tests (stdio)
 
 ## License
 
