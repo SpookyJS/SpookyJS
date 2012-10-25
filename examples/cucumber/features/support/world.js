@@ -15,12 +15,12 @@ var World = function World(callback) {
             },
             child: {
                 port: 8081,
-                spooky_lib: './node_modules',
+                spooky_lib: './',
                 script: './lib/bootstrap.js'
             }
         }, onCreated);
     } catch (e) {
-        console.dir(e)
+        console.dir(e);
         console.trace('Spooky.listen failed');
     }
 
@@ -66,10 +66,8 @@ var World = function World(callback) {
         }
     });
 
-    function onCreated(err, error, response) {
-        if (err) {
-            throw err;
-        } else if (error) {
+    function onCreated(error, response) {
+        if (error) {
             console.dir(error);
             throw new Error('Failed to initialize context.spooky: ' +
                 error.code + ' - '  + error.message);
