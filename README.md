@@ -13,19 +13,16 @@ Drive [CasperJS](http://casperjs.org/) from Node.js.
 SpookyJS is available from npm.
 
 ``` shell
-$ npm install spooky
+$ npm install -g spooky
 ```
 
 ## Usage
 
 ``` javascript
-var Spooky = require('../lib/spooky');
+var Spooky = require('spooky');
 
 var spooky = new Spooky({
-        child: {
-            script: './lib/bootstrap.js',
-            spooky_lib: './node_modules'
-        },
+        // Configuraiton options for casper
         casper: {
             logLevel: 'debug',
             verbose: true
