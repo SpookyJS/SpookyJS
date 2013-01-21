@@ -1,10 +1,10 @@
-var Spooky = require('../lib/spooky');
+try {
+    var Spooky = require('spooky');
+} catch (e) {
+    var Spooky = require('../lib/spooky');
+}
 
 var spooky = new Spooky({
-        child: {
-            script: './lib/bootstrap.js',
-            spooky_lib: './node_modules'
-        },
         casper: {
             logLevel: 'debug',
             verbose: true
