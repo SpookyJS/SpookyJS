@@ -1,6 +1,6 @@
 {
     "name": "spooky",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "author": "Lon Ingram <lon@waterfallmobile.com>",
     "description": "Drive CasperJS from Node.js",
 
