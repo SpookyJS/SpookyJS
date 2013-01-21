@@ -5,7 +5,8 @@ Drive [CasperJS](http://casperjs.org/) from Node.js.
 **Important: the advent of native WebDriver support in [PhantomJS
 1.8](http://phantomjs.org/release-1.8.html) has made Spooky's future
 uncertain.** I am inclined to deprecate Spooky and encourage everyone to use
-WebDriver. Please comment on #26 if you disagree.
+WebDriver. Please comment on
+[#26](https://github.com/WaterfallEngineering/SpookyJS/issues/26) if you disagree.
 
 ## Installation
 
