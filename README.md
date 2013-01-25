@@ -87,6 +87,13 @@ You may change the port that the fixture server runs on by setting the `TEST_POR
 
 See the tests for an example of how to use SpookyJS with [Mocha](http://visionmedia.github.com/mocha). 
 
+## Known issues
+
+Spooky's `stdio` transport reportedly does not work on Windows and Ubuntu.
+
+The `http` transport hangs when using Phantom 1.8 with older versions of
+CasperJS.
+
 ## Development
 
 ### Running the tests
