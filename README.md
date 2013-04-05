@@ -69,10 +69,17 @@ var spooky = new Spooky({
     });
 ```
 
-A minimal example can be found in the repo under `examples`. Run it like this:
+A minimal example can be found in the repo under `examples`. Run it like this in
+a cloned repo:
 
 ``` shell
 $ node examples/hello.js
+```
+
+Run it like this if you installed Spooky via npm:
+
+``` shell
+$ node node_modules/spooky/examples/hello.js
 ```
 
 A small example [Cucumber.js](https://github.com/cucumber/cucumber-js/) test suite can be found in the repo under `examples/cucumber`. To run the suite:
