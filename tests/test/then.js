@@ -74,6 +74,34 @@ describe("Spooky provides Casper's then* functions", function () {
         });
     });
 
+    describe('spooky.thenClick', function () {
+        it('adds a new navigation step to click a given selection',
+            function (done) {
+                context.spooky.start(FIXTURE_URL + '/index.html');
+
+                context.spooky.thenClick('a');
+
+                context.spooky.waitFor(function () {
+                    return this.getTitle() === 'One';
+                });
+
+                context.spooky.then(function () {
+                    this.echo('done');
+                });
+
+                function onConsole(line) {
+                    if (line === 'done') {
+                        context.spooky.removeListener('console', onConsole);
+                        done();
+                        return;
+                    }
+                }
+                context.spooky.on('console', onConsole);
+
+                context.spooky.run();
+            });
+    });
+
     describe('spooky.thenEvaluate', function () {
         it('throws if passed something that is not a function',
             function (done) {
