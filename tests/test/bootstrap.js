@@ -1,14 +1,12 @@
 var expect = require('expect.js');
 var spawn = require('child_process').spawn;
 var carrier = require('carrier');
-var BufferedStream = require('../../lib/spooky/buffered-stream');
 var _ = require('underscore');
 var defaultOptions = {
     command: /^win/.test(process.platform) ? 'casperjs.bat' : 'casperjs',
     script: __dirname + '/../../lib/bootstrap.js',
     spooky_lib: __dirname + '/../../',
-    transport: 'stdio',
-    bufferSize: 16 * 1024 // 16KB
+    transport: 'stdio'
 };
 
 function spawnChild(options) {
@@ -23,10 +21,6 @@ function spawnChild(options) {
 
     child = spawn(options.command, args);
     child.stdout.setEncoding('utf8');
-
-    var stdin = child.stdin;
-    child.stdin = new BufferedStream(options.bufferSize);
-    child.stdin.pipe(stdin);
 
     return child;
 }
