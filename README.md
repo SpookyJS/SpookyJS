@@ -10,9 +10,9 @@ Casper's API, have a look at [PhantomJS
 
 ### Prerequisites
 
-* [Node.js](http://nodejs.org)
-* [PhantomJS](http://phantomjs.org/)
-* [CasperJS](http://casperjs.org/)
+* [Node.js](http://nodejs.org) >= 0.8
+* [PhantomJS](http://phantomjs.org/) >= 1.9
+* [CasperJS](http://casperjs.org/) >= 1.0
 
 SpookyJS is available from npm.
 
@@ -118,6 +118,17 @@ The following make parameters are supported (defaults are in parentheses):
 * `TEST_ARGS` Additional [arguments](http://visionmedia.github.com/mocha/#usage) to pass through to Mocha
 * `TEST_DEBUG` Print debug logging to the console (false)
 * `TEST_TRANSPORT` the Spooky transport to use when running the tests (stdio)
+
+## Release Notes
+
+### 0.2.2
+
+- Node 0.10 support
+- use Phantom 1.9's `system.stdin` for stdio transport
+- add `phantom.onError` handler. Spooky now emits an error event and exits
+  non-zero if an unhandled JS error occurs in the Phantom context.
+- add `thenClick` method (@andresgottlieb)
+- fix #28
 
 ## License
 
