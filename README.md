@@ -121,6 +121,12 @@ The following make parameters are supported (defaults are in parentheses):
 
 ## Release Notes
 
+### 0.2.3
+
+- Allow casper restart in stdio server (@kpdecker)
+- Fix #51 by correctly inheriting from EventEmitter (thanks @tomchentw)
+- Move emit to a module and provide emitting console module
+
 ### 0.2.2
 
 - Node 0.10 support
