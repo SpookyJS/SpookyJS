@@ -22,6 +22,12 @@ $ npm install spooky
 
 ## Usage
 
+Read about how Spooky works in the
+[documentation](https://github.com/WaterfallEngineering/SpookyJS/wiki/Introduction).
+API documentation and examples coming soon.
+
+### Quickstart
+
 ``` javascript
 try {
     var Spooky = require('spooky');
