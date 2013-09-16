@@ -78,7 +78,7 @@ module.exports.before = function (context) {
         child: {
             port: 8081,
             script: 'lib/bootstrap.js',
-            spooky_lib: './',
+            spooky_lib: process.cwd() + '/',
             transport: process.env.TEST_TRANSPORT || 'stdio'
         },
         casper: {
