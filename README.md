@@ -36,6 +36,9 @@ try {
 }
 
 var spooky = new Spooky({
+        child: {
+            transport: 'http'
+        },
         casper: {
             logLevel: 'debug',
             verbose: true
