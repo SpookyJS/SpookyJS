@@ -19,25 +19,6 @@ var spooky = new Spooky({
             throw e;
         }
 
-        spooky.on('error', function (e) {
-            console.error(e);
-        });
-
-        /*
-        // Uncomment this block to see all of the things Casper has to say.
-        // There are a lot.
-        // He has opinions.
-        spooky.on('console', function (line) {
-            console.log(line);
-        });
-        */
-
-        spooky.on('log', function (log) {
-            if (log.space === 'remote') {
-                console.log(log.message.replace(/ \- .*/, ''));
-            }
-        });
-
         spooky.start(
             'http://en.wikipedia.org/wiki/Spooky_the_Tuff_Little_Ghost');
         spooky.thenEvaluate(function () {
@@ -45,3 +26,26 @@ var spooky = new Spooky({
         });
         spooky.run();
     });
+
+spooky.on('error', function (e, stack) {
+    console.error(e);
+
+    if (stack) {
+        console.log(stack);
+    }
+});
+
+/*
+// Uncomment this block to see all of the things Casper has to say.
+// There are a lot.
+// He has opinions.
+spooky.on('console', function (line) {
+    console.log(line);
+});
+*/
+
+spooky.on('log', function (log) {
+    if (log.space === 'remote') {
+        console.log(log.message.replace(/ \- .*/, ''));
+    }
+});
