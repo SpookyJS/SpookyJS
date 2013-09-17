@@ -13,7 +13,9 @@ describe('bootstrap/emit', function () {
         context.spooky.start();
 
         context.spooky.then(function () {
-            var emit = require('./lib/bootstrap/emit').emit;
+            var fs = require('fs');
+            var emit =
+                require(fs.workingDirectory + '/lib/bootstrap/emit').emit;
 
             emit('testing', 1, 2, 3);
         });
@@ -37,7 +39,9 @@ describe('bootstrap/emit', function () {
         context.spooky.start();
 
         context.spooky.then(function () {
-            var console = require('./lib/bootstrap/emit').console;
+            var fs = require('fs');
+            var console =
+                require(fs.workingDirectory + '/lib/bootstrap/emit').console;
 
             console.log('HEYO');
             console.debug('HEYO');
