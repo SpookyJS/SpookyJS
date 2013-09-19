@@ -240,6 +240,104 @@ describe("Spooky provides Casper's wait* functions", function () {
         });
     });
 
+    describe('spooky.waitForPopup', function () {
+        it('throws if passed a next step that is not a function',
+            function (done) {
+                context.spooky.once('error', function (e) {
+                    expect(e.message.toLowerCase()).to.
+                        contain('cannot parse function');
+                    done();
+                });
+
+                context.spooky.waitForPopup('',
+                    'I am not a valid function');
+            });
+
+        it('throws if passed a timeout callback that is not a function',
+            function (done) {
+                context.spooky.once('error', function (e) {
+                    expect(e.message.toLowerCase()).to.
+                        contain('cannot parse function');
+                    done();
+                });
+
+                context.spooky.waitForPopup('',
+                    function then() {},
+                    'I am not a valid function');
+            });
+
+        it('waits until the popup is opened to run the next step',
+            function (done) {
+                context.spooky.start(FIXTURE_URL + '/popup.html');
+
+                context.spooky.then(function () {
+                    if (this.popups.length > 0) {
+                        throw new Error('Found unexpected open popup');
+                    }
+                });
+
+                context.spooky.thenClick('#popup1');
+                context.spooky.waitForPopup('1.html');
+
+                context.spooky.then(function () {
+                    if (this.popups.length !== 1) {
+                        throw new Error('Expected one popup but saw ' +
+                            this.popups.length);
+                    }
+                    this.emit('done');
+                });
+
+                context.spooky.on('done', done);
+
+                context.spooky.run();
+            });
+
+        it('accepts an optional next step', function (done) {
+            context.spooky.start(FIXTURE_URL + '/popup.html');
+
+            context.spooky.thenClick('#popup1');
+            context.spooky.waitForPopup('1.html', function () {
+                this.emit('done');
+            });
+
+            context.spooky.on('done', done);
+
+            context.spooky.run();
+        });
+
+        it('accepts an optional timeout callback', function (done) {
+            context.spooky.start(FIXTURE_URL + '/popup.html');
+
+            context.spooky.waitForPopup('not-gonna-match', null, function () {
+                this.emit('done');
+            }, 100);
+
+            context.spooky.on('done', done);
+
+            context.spooky.run();
+        });
+
+        it('accepts an optional timeout', function (done) {
+            context.spooky.start(FIXTURE_URL + '/popup.html');
+
+            context.spooky.then(function () {
+                this.__time = Date.now();
+            });
+
+            context.spooky.waitForPopup('not-gonna-match', null, function () {
+                this.emit('done', Date.now() - this.__time);
+            }, 500);
+
+            context.spooky.on('done', function (time) {
+                expect(time).to.be.greaterThan(500);
+                done();
+            });
+
+            context.spooky.run();
+        });
+    });
+
+
     describe('spooky.waitForSelector', function () {
         it('throws if passed a next step that is not a function',
             function (done) {
