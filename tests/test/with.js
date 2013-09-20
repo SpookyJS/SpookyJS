@@ -12,6 +12,7 @@ describe("Spooky provides Casper's with* functions", function () {
     describe('spooky.withFrame', function () {
         it('throws if its step is not a function',
             function (done) {
+                context.spooky.swallowErrors = true;
                 context.spooky.once('error', function (e) {
                     expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');
@@ -59,6 +60,7 @@ describe("Spooky provides Casper's with* functions", function () {
     describe('spooky.withPopup', function () {
         it('throws if its second argument is not a function',
             function (done) {
+                context.spooky.swallowErrors = true;
                 context.spooky.once('error', function (e) {
                     expect(e.message.toLowerCase()).to.
                         contain('cannot parse function');

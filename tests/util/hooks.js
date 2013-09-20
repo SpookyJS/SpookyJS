@@ -20,8 +20,12 @@ function setup (context, done) {
     spooky.on('error', function (error) {
         error = error.data ? error.data : error;
         spooky.errors.push(error);
-        if (spooky.debug) {
-            console.error('spooky error', util.inspect(error));
+
+        if (!spooky.swallowErrors) {
+            if (spooky.debug) {
+                console.error('spooky error', util.inspect(error));
+            }
+            throw new Error(error.message);
         }
     });
 
