@@ -83,7 +83,35 @@ describe('the Spooky constructor', function () {
 
                     spooky.on('done', done);
                     spooky.start(FIXTURE_URL + '/index.html');
-                    spooky.thenOpen(FIXTURE_URL + '/1.html');
+                    spooky.run();
+                });
+            });
+
+            it('serializes nested function tuple values', function (done) {
+                var setupFn;
+
+                context = {
+                    config: {
+                        casper: {
+                            verbose: true,
+                            logLevel: 'debug',
+                            httpStatusHandlers: {
+                                200: [{
+                                    done: 'done'
+                                }, function () {
+                                    this.emit(done);
+                                }]
+                            }
+                        }
+                    }
+                };
+                setupFn = hooks.before(context);
+
+                setupFn(function () {
+                    var spooky = context.spooky;
+
+                    spooky.on('done', done);
+                    spooky.start(FIXTURE_URL + '/index.html');
                     spooky.run();
                 });
             });
