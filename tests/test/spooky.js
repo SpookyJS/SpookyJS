@@ -1,3 +1,4 @@
+var _ = require('underscore');
 var Spooky = require('../../lib/spooky');
 var expect = require('expect.js');
 
@@ -115,6 +116,37 @@ describe('the Spooky constructor', function () {
                     spooky.run();
                 });
             });
+        });
+
+        describe('options.child', function () {
+            it('accepts a spawnOptions to pass to child_process.spawn',
+                function (done) {
+                    var setupFn;
+
+                    context = {
+                        config: {
+                            child: {
+                                spawnOptions: {
+                                    env: _.defaults({
+                                        done: 'done'
+                                    }, process.env)
+                                }
+                            }
+                        }
+                    };
+                    setupFn = hooks.before(context);
+
+                    setupFn(function () {
+                        var spooky = context.spooky;
+
+                        spooky.on('done', done);
+                        spooky.start(FIXTURE_URL + '/index.html');
+                        spooky.then(function () {
+                            this.emit(require('system').env.done);
+                        });
+                        spooky.run();
+                    });
+                });
         });
     });
 });
