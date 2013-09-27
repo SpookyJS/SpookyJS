@@ -140,6 +140,18 @@ The following make parameters are supported (defaults are in parentheses):
 
 ## Release Notes
 
+### 0.2.4
+
+- support CasperJS v1.0.3+ (thanks @rumca and @ucarbehlul)
+- use a spec-compliant implementation of `Function.prototype.bind`
+- add `options.child.spawnOptions`: its value is passed thru as the `options`
+  argument to `child_process.spawn`
+- serialize function and function tuple values in `options.casper`
+- teach test to throw if Spooky emits an error
+- implement `withFrame`, `withPopup`, and `waitForPopup` (thanks @asciidisco)
+- use HTTP transport by default in hello example
+- fix invalid argument order in `RequestStream._onError` (Dmitry Menshikov)
+
 ### 0.2.3
 
 - Allow casper restart in stdio server (@kpdecker)
