@@ -8,6 +8,9 @@
     "url": "http://github.com/WaterfallEngineering/SpookyJS.git"
   },
   "main": "./lib/spooky.js",
+  "scripts": {
+    "test": "make test"
+  },
   "dependencies": {
     "underscore": "1.3.x",
     "async": "0.1.x",
