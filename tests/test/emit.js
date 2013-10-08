@@ -1,11 +1,9 @@
 var _ = require('underscore');
-var util = require('util');
 var expect = require('expect.js');
 
 describe('bootstrap/emit', function () {
     var context = {};
     var hooks = require('../util/hooks');
-    var FIXTURE_URL = hooks.FIXTURE_URL;
 
     beforeEach(hooks.before(context));
 
@@ -56,7 +54,7 @@ describe('bootstrap/emit', function () {
 
         context.spooky.on('console', onConsole);
 
-        context.spooky.once('run.complete', function (entry) {
+        context.spooky.once('run.complete', function () {
             expect(out).to.contain('HEYO');
 
             expect(out).to.contain('debug HEYO');

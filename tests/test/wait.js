@@ -1,4 +1,3 @@
-var util = require('util');
 var expect = require('expect.js');
 
 describe("Spooky provides Casper's wait* functions", function () {
@@ -23,8 +22,6 @@ describe("Spooky provides Casper's wait* functions", function () {
 
         it('pause step execution for a given amount of time',
             function (done) {
-                var out = [];
-
                 context.spooky.start();
 
                 context.spooky.then(function () {
@@ -53,8 +50,6 @@ describe("Spooky provides Casper's wait* functions", function () {
 
         it('optionally executes a step on done',
             function (done) {
-                var out = [];
-
                 context.spooky.start();
 
                 context.spooky.wait(500, function () {
@@ -74,8 +69,6 @@ describe("Spooky provides Casper's wait* functions", function () {
             });
 
         it('accepts a function tuple', function (done) {
-            var out = [];
-
             context.spooky.start();
 
             context.spooky.wait(500, [{
@@ -139,8 +132,6 @@ describe("Spooky provides Casper's wait* functions", function () {
 
         it('waits until the test returns true to run the next step',
             function (done) {
-                var out = [];
-
                 context.spooky.start();
 
                 context.spooky.then(function () {
@@ -374,8 +365,6 @@ describe("Spooky provides Casper's wait* functions", function () {
 
         it('waits until the selector matches to run the next step',
             function (done) {
-                var out = [];
-
                 context.spooky.start(FIXTURE_URL + '/1.html');
 
                 context.spooky.then(function () {
@@ -506,8 +495,6 @@ describe("Spooky provides Casper's wait* functions", function () {
 
         it('waits until the selector does not match to run the next step',
             function (done) {
-                var out = [];
-
                 context.spooky.start(FIXTURE_URL + '/1.html');
 
                 context.spooky.then(function () {
@@ -639,8 +626,6 @@ describe("Spooky provides Casper's wait* functions", function () {
 
         it('waits until a resource is loaded to run the next step',
             function (done) {
-                var out = [];
-
                 context.spooky.start(FIXTURE_URL + '/1.html');
 
                 context.spooky.then(function () {
@@ -777,8 +762,6 @@ describe("Spooky provides Casper's wait* functions", function () {
 
         it('waits until the selector matches a visible element to run the next step',
             function (done) {
-                var out = [];
-
                 context.spooky.start(FIXTURE_URL + '/1.html');
 
                 context.spooky.then(function () {
@@ -918,8 +901,6 @@ describe("Spooky provides Casper's wait* functions", function () {
 
         it('waits until the selector does not match a visible element to run the next step',
             function (done) {
-                var out = [];
-
                 context.spooky.start(FIXTURE_URL + '/1.html');
 
                 context.spooky.then(function () {

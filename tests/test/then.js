@@ -1,4 +1,3 @@
-var util = require('util');
 var expect = require('expect.js');
 
 describe("Spooky provides Casper's then* functions", function () {
@@ -57,6 +56,7 @@ describe("Spooky provides Casper's then* functions", function () {
             context.spooky.then([{
                 foo: 'bar'
             }, function () {
+                /* global foo */
                 this.echo(foo);
             }]);
 

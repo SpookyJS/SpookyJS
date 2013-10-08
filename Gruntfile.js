@@ -34,7 +34,12 @@ module.exports = function (grunt) {
       phantom_libs: {
         src: ['lib/bootstrap.js', 'lib/bootstrap/**/*.js'],
         options: {
-          phantom: true
+          phantom: true,
+          browser: true,
+          globals: {
+            patchRequire: true,
+            module: true
+          }
         }
       },
       tests: {

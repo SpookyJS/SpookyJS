@@ -1,6 +1,3 @@
-var util = require('util');
-var expect = require('expect.js');
-
 describe("Spooky provides Casper's navigation functions", function () {
     var context = {};
     var hooks = require('../util/hooks');

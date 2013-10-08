@@ -1,6 +1,4 @@
 var _ = require('underscore');
-var Spooky = require('../../lib/spooky');
-var expect = require('expect.js');
 
 describe('the Spooky constructor', function () {
     var context = {};

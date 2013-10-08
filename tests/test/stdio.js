@@ -16,7 +16,7 @@ describe('Spooky provides a stdio transport', function () {
 
             // expect child to exit non-zero
             var exited = false;
-            child.on('exit', function (code, signal) {
+            child.on('exit', function (code) {
                 expect(code).not.to.be(0);
                 exited = true;
 

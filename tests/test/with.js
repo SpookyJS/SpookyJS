@@ -1,8 +1,6 @@
-var util = require('util');
 var expect = require('expect.js');
 
 describe("Spooky provides Casper's with* functions", function () {
-    var nop = function nop() {};
     var context = {};
     var hooks = require('../util/hooks');
     var FIXTURE_URL = hooks.FIXTURE_URL;
