@@ -3,9 +3,9 @@
   "version": "0.2.4",
   "author": "Lon Ingram <lon@waterfallmobile.com>",
   "description": "Drive CasperJS from Node.js",
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/WaterfallEngineering/SpookyJS.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/WaterfallEngineering/SpookyJS.git"
   },
   "main": "./lib/spooky.js",
   "dependencies": {
@@ -20,7 +20,10 @@
     "mocha": "1.3.x",
     "expect.js": "0.1.x",
     "cucumber": "*",
-    "http-server": "0.5.x"
+    "http-server": "0.5.x",
+    "grunt": "~0.4.1",
+    "load-grunt-tasks": "~0.1.0",
+    "grunt-contrib-jshint": "~0.6.4"
   },
   "license": "MIT"
 }
