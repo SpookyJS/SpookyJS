@@ -24,8 +24,8 @@
     "expect.js": "0.1.x",
     "http-server": "0.5.x",
     "load-grunt-tasks": "~0.1.0",
-    "grunt-contrib-jshint": "~0.6.4"
     "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.4",
     "grunt-mocha-test": "~0.7.0"
   },
   "license": "MIT"
