@@ -140,6 +140,11 @@ The following make parameters are supported (defaults are in parentheses):
 
 ## Release Notes
 
+### 0.2.5
+
+- fix #95 (thanks @ChrisAntaki)
+- disable Node 0.8 Travis build
+
 ### 0.2.4
 
 - support CasperJS v1.0.3+ (thanks @rumca and @ucarbehlul)
