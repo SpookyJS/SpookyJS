@@ -17,7 +17,6 @@ describe('Spooky evaluates in Casper context', function () {
       context.spooky.start();
 
       context.spooky.then(function () {
-        this.emit('test', '123');
         console.log(window);
       });
       context.spooky.waitFor(function () {
