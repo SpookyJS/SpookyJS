@@ -174,6 +174,37 @@ describe("Spooky provides Casper's then* functions", function () {
                 context.spooky.run();
             });
 
+        it('accepts an optional arguments',
+            function (done) {
+                context.spooky.start(FIXTURE_URL + '/1.html');
+
+                context.spooky.thenEvaluate(function (foo, bar) {
+                    window.__foo = foo;
+                    window.__bar = bar;
+                }, 'foo', 'bar');
+
+                context.spooky.waitFor(function () {
+                    return this.evaluate(function () {
+                        return (window.__foo === 'foo' && window.__bar === 'bar');
+                    });
+                });
+
+                context.spooky.then(function () {
+                    this.echo('done');
+                });
+
+                function onConsole(line) {
+                    if (line === 'done') {
+                        context.spooky.removeListener('console', onConsole);
+                        done();
+                        return;
+                    }
+                }
+                context.spooky.on('console', onConsole);
+
+                context.spooky.run();
+            });
+
         // TODO: Figure out how to test the optional settings object
     });
 
