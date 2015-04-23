@@ -4,8 +4,16 @@ node_js:
 before_install:
   - git clone git://github.com/n1k0/casperjs.git ~/casperjs
   - cd ~/casperjs
+  - git checkout $CASPER_VERSION
   - export PATH=$PATH:`pwd`/bin
   - cd -
 before_script:
   - phantomjs --version
   - casperjs --version
+
+env:
+  matrix:
+    - CASPER_VERSION=1.0.0-RC4
+    - CASPER_VERSION=1.0.0
+    - CASPER_VERSION=1.0.4
+    - CASPER_VERSION=master
