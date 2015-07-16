@@ -109,7 +109,7 @@ $ make cucumber.js
 
 You may change the port that the fixture server runs on by setting the `TEST_PORT` make parameter.
 
-See the tests for an example of how to use SpookyJS with [Mocha](http://visionmedia.github.com/mocha). 
+See the tests for an example of how to use SpookyJS with [Mocha](http://mochajs.org).
 
 ## Known issues
 
@@ -122,7 +122,7 @@ CasperJS.
 
 ### Running the tests
 
-SpookyJS includes a suite of unit tests, driven by [Mocha](http://visionmedia.github.com/mocha). To run the tests:
+SpookyJS includes a suite of unit tests, driven by [Mocha](http://mochajs.org). To run the tests:
 
 ``` shell
 $ make test
@@ -130,11 +130,11 @@ $ make test
 
 The following make parameters are supported (defaults are in parentheses):
 
-* `TEST_REPORTER` the [Mocha reporter](http://visionmedia.github.com/mocha/#reporters) to use (dot)
+* `TEST_REPORTER` the [Mocha reporter](http://mochajs.org/#reporters) to use (dot)
 * `TEST_PORT` the port to run the fixture web server on (8080)
 * `TEST_TIMEOUT` threshold in ms to timeout a test (4000)
 * `TEST_SLOW` threshold in ms to say a test is slow (2000)
-* `TEST_ARGS` Additional [arguments](http://visionmedia.github.com/mocha/#usage) to pass through to Mocha
+* `TEST_ARGS` Additional [arguments](http://mochajs.org/#usage) to pass through to Mocha
 * `TEST_DEBUG` Print debug logging to the console (false)
 * `TEST_TRANSPORT` the Spooky transport to use when running the tests (stdio)
 
