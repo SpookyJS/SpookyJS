@@ -1,5 +1,7 @@
 # SpookyJS
 
+[![Join the chat at https://gitter.im/SpookyJS/SpookyJS](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/SpookyJS/SpookyJS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Drive [CasperJS](http://casperjs.org/) from Node.js.
 
 **Note**: If you are simply looking to control Phantom from Node and don't need
