@@ -3,7 +3,7 @@ var carrier = require('carrier');
 var _ = require('underscore');
 
 var defaultOptions = {
-    command: /^win/.test(process.platform) ? 'casperjs.bat' : 'casperjs',
+    command: 'casperjs' + (process.platform === 'win32' ? '.cmd' : ''),
     script: __dirname + '/../../lib/bootstrap.js',
     spooky_lib: __dirname + '/../../',
     transport: 'stdio'
