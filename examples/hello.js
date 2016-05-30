@@ -6,7 +6,9 @@ try {
 
 var spooky = new Spooky({
         child: {
-            transport: 'http'
+            transport: 'http',
+            "ssl-protocol": "any",
+            "ignore-ssl-errors" : true
         },
         casper: {
             logLevel: 'debug',
